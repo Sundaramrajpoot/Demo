@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  
+  .cursor-container {
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .cursor-line {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid;
+    animation: line-animation 0.5s infinite linear;
+  }
+  
+  .cursor-line:nth-child(1) {
+    border-color: #ff0000;
+  }
+  
+  .cursor-line:nth-child(2) {
+    border-color: #00ff00;
+  }
+  
+  .cursor-line:nth-child(3) {
+    border-color: #0000ff;
+  }
+  
+  @keyframes line-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

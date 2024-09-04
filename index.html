@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursor Multiple Color Line Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor-container">
+    <div class="cursor-line"></div>
+    <div class="cursor-line"></div>
+    <div class="cursor-line"></div>
+  </div>
+  <script src="script.js"></script>
+
+  <script>
+    const cursorContainer = document.querySelector('.cursor-container');
+
+document.addEventListener('mousemove', (event) => {
+  cursorContainer.style.top = event.clientY + 'px';
+  cursorContainer.style.left = event.clientX + 'px';
+});
+  </script>
+</body>
+</html>
